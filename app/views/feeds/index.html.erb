@@ -1,0 +1,8 @@
+<%count = 0%>
+
+<%@feeds.entries.each do |feed|%>
+   <%=link_to feed.title, feed.url%>    <br/>
+<%=feed.summary.html_safe%>    <br/>
+    <%count +=1%>
+   <%break if count==5%>
+<%end%>
